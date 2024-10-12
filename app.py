@@ -34,12 +34,12 @@ if spara:
         data_saving(innehåll,titel,vecka_num,dag,tid_stampel)
         st.success("Ditt inlägg har nu sparats.")
 
-if not items:
+if not table:
    st.info(f"No saved documents found for this week.") # will show if it exists in the data or not for the specific week
 
 else: # Then here is what it would show when we save
    with st.container(border=True,height=200):
-    for item in items:
+    for item in table:
         st.write(f"**titel:** {item['titel']}")
         st.write("------------------------------")
         st.write(f"**innehåll:** {item['innehåll']}")
